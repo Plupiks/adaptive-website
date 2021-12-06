@@ -22,34 +22,6 @@
   flex: 0 1 33.33333%;
   padding: 50px 40px;
   background: $white;
-  transition: all 275ms ease-out;
-
-  &:hover {
-    background: $darkBlue;
-    transform: scale(120%);
-
-    .contacts--icon path{
-      fill: #fff;
-    }
-
-    .contacts--link {
-      color: #fff;
-    }
-
-    .contacts--title {
-      color: #fff;
-    }
-
-    .contacts-button{
-      background: $orange;
-      color: #fff;
-    }
-
-  }
-}
-
-.contacts-buttons-hover {
-  background: red;
 }
 
 .contacts--item {
@@ -88,7 +60,91 @@
   @include fontSWCL (0.35em, 600, $orange, 1.714);
   cursor: pointer;
 
-  &:active {
-    background: #852b07;
+  &:hover {
+    background: $orange;
+  }
+}
+
+// .contacts-buttons-hover {
+//   background: $orange;
+// }
+
+@media only screen and (min-width: 1100px) {
+  .contacts--body {
+    transition: all 275ms ease-out;
+
+    &:hover {
+      background: $darkBlue;
+      transform: scale(120%);
+
+      .contacts--icon path{
+        fill: #fff;
+      }
+
+      .contacts--link {
+        color: #fff;
+      }
+
+      .contacts--title {
+        color: #fff;
+      }
+
+      .contacts-button{
+        background: $orange;
+        color: #fff;
+      }
+
+    } 
+  }
+
+  .contacts--request {
+    .contacts-button:hover {
+      background: darken($orange, 4%);
+    }
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+
+  .getintoch {
+    padding: 40px 0 80px 0;
+  }
+
+  .getintoch--contacts {
+    flex-wrap: wrap;
+    row-gap: 40px;
+  }
+
+  .getintoch--wrapper > *:not(:last-child) {
+    margin: 50px 0 50px 0;
+  }
+
+  .contacts--body {
+    flex: 1 1 auto;
+  }
+
+  .contacts-button {
+
+    &:hover {
+      color: #fff;
+      background: $orange;
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .contacts--image {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .getintoch--contacts {
+    padding: 0;
+  }
+
+  .contacts--body {
+    padding: 50px 30px;
   }
 }
