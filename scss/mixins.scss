@@ -1,0 +1,6 @@
+@mixin fontSWCL ($fontSize, $fontWeight, $fontColor, $lineHeight) {
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  color: $fontColor;
+  line-height: $lineHeight;
+}

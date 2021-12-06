@@ -1,0 +1,87 @@
+.advice {
+  padding: 125px 0 80px 0;
+}
+.advice--wrapper {
+  font-size: 2.5rem;
+}
+.advice--header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 470px;
+  margin: 0 auto;
+  margin-bottom: 45px;
+}
+
+.advice--cards {
+  display: flex;
+  margin: 0 -15px;
+  flex-wrap: wrap;
+  row-gap: 40px;
+}
+
+.advice--column {
+  padding: 0 15px;
+  flex: 0 1 25%;
+  min-width: 238px;
+}
+.advice--card-items {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #fff;
+
+  &>*:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+.advice--card-content {
+  flex: 1 1 auto;
+  padding: 30px 25px 0;
+
+  &>*:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+
+.card-content--title {
+  display: block;
+  @include fontSWCL (0.4em, 700, $darkBlue, 1.5);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.card-content--subtitle {
+  @include fontSWCL (0.35em, 500, $lightGrey, 1.428);
+}
+.advice--card-img {
+  display: block;
+  padding: 0 0 60% 0;
+}
+
+@media only screen and (max-width: 1100px) {
+  .advice--column {
+    flex: 0 1 50%;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .advice {
+    padding: 80px 0 80px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .advice {
+    padding: 60px 0 60px;
+  }
+
+  .advice--column {
+    flex: 0 1 100%;
+  }
+}

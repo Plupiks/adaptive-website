@@ -1,0 +1,18 @@
+.clients {
+  padding: 58px 0;
+}
+.clients--wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 40px;
+}
+.clients--column {
+  flex: 0 1 16.6666%;
+  min-width: 151px;
+  text-align: center;
+}
+.clients--picture img {
+  max-width: 100%;
+}

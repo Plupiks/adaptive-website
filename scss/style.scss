@@ -1,0 +1,94 @@
+// Imports
+@import 'mixins';
+@import 'variables';
+
+// Code
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+input,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: $greyWhite;
+  font-family: $Montserrat;
+  font-weight: $w400;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: $w700;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+// ------------Main--------------------
+.wrapper {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.container {
+  max-width: 1075px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.bgi {
+  position: relative;
+}
+
+.bgi img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+// ------------Page--------------------
+.page {
+  flex: 1 1 auto;
+}
+
+// ------------Header--------------------
+@import 'header';
+// ------------Hero----------------------
+@import 'hero';
+// ------------Services------------------
+@import 'services';
+// ------------Achievement---------------
+@import 'achievement';
+// ------------Advice--------------------
+@import 'advice';
+// ------------WhoWeAre------------------
+@import 'whoweare';
+// ------------Clients-------------------
+@import 'clients';
+// ------------Subscribe-------------------
+@import 'subscribe';
+// ------------GetInToch-------------------
+@import 'getintoch';

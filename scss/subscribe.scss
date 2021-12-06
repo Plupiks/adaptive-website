@@ -1,0 +1,99 @@
+.subscribe {
+  position: relative;
+  padding-bottom: 20px;
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    content: '';
+    background: $darkBlue;
+    width: 100%;
+    height: 77px;
+  }
+
+}
+.subscribe--wrapper {
+  padding: 0 32px;
+  font-size: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+.subscribe--body {
+  padding: 30px 50px;
+  display: flex;
+  justify-content: space-between;
+  background: #17213C;
+  border-radius: 2px;
+}
+.subscribe--title {
+  max-width: 266px;
+  @include fontSWCL (inherit, 700, $white, 1.333);
+}
+.subscribe--form {
+  flex: 0 1 50%;
+  display: flex;
+  align-items: center;
+}
+.form {
+  min-height: 58px;
+}
+.form--input {
+  flex: 1 1 auto;
+  @include fontSWCL (0.583em, 400, $lightGreyH, 2);
+  padding: 15px 20px;
+  background: $greyWhite;
+  border-radius: 5px 0px 0px 5px;
+  border: 1px solid #E6E6E6;
+  outline: none;
+}
+.form--button {
+  @include fontSWCL (0.583em, 400, $white, 2);
+  align-items: center;
+  padding: 15px 22.5px;
+  border: none;
+  background: #FF7B47;
+  border: 1px solid #E6E6E6;
+  border-radius: 0px 5px 5px 0px;
+
+  &:active {
+    background: #ff6427;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .subscribe--wrapper {
+    padding: 0;
+    margin: 0 -30px;
+  }
+}
+
+@media only screen and (max-width: 1075px) {
+  .subscribe--wrapper {
+    margin: 0 -15px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .subscribe--body {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  .subscribe--title {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .subscribe--body {
+    padding: 20px 10px;
+  }
+
+  .form--input {
+    width: 100%;
+  }
+}

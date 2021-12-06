@@ -1,0 +1,87 @@
+.achievement {
+  padding: 80px 0;
+}
+.achievement--wrapper {
+  text-align: center;
+  font-size: 2.5rem;
+}
+.achievement--title {
+  margin: 0 auto;
+}
+
+.title {
+  @include fontSWCL (inherit, 700, $darkBlue, 1.425);
+  margin-bottom: 10px;
+}
+
+.achievement--subtitle {
+  margin: 0 auto;
+  max-width: 511px;
+  margin-bottom: 50px;
+}
+
+.subtitle {
+  @include fontSWCL (0.35em, 500, $lightGrey, 1.428);
+}
+
+.achievement--cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+  row-gap: 40px;
+}
+
+.cards--colums {
+  padding: 0 15px;
+  flex: 0 1 25%;
+}
+
+.cards--items {
+  height: 100%;
+  padding: 30px 30px;
+  background: #fff;
+  border: 2px solid $white;
+  transition: all 0.05s ease-out;
+
+  & >*:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &:hover {
+    border-radius: 10px;
+    border: 2px solid $greenBlue;
+  } 
+}
+
+.cards--image {
+  display: flex;
+  margin: 0 auto;
+  width: 48px;
+  height: 48px;
+}
+
+.cards--image svg {
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+}
+
+.cards--value {
+  @include fontSWCL (inherit, 700, $darkBlue, 1.425);
+}
+
+.cards--name {
+  @include fontSWCL (0.4em, 700, $lightGrey, 1.25);
+}
+
+@media only screen and (max-width: 992px) {
+  .cards--colums {
+    flex: 0 1 50%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .cards--colums {
+    flex: 0 1 100%;
+  }
+}
