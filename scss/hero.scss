@@ -32,6 +32,7 @@
   }
 }
 .hero--button {
+  cursor: pointer;
   @include fontSWCL(0.875rem, 700, $white, 2);
   border-radius: 37px;
   border: none;
